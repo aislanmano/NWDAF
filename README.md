@@ -19,7 +19,7 @@
 	4.1. site:github.com Nnwdaf_AnalyticsInfo.yaml
 	. Depois de clicar em RAW, copiar tudo.
 	
-	<img src="https://github.com/aislanmano/NWDAF/issues/1#issue-1082294323" width="15%"></img>
+	<img src="https://user-images.githubusercontent.com/29335033/146395128-dca01f3b-e59f-4219-96cc-00b118ada528.png" width="15%"></img>
 	
 	
 	--> Tem que ter permissão de leitura e escrita neste diretório (openapi_teste)
