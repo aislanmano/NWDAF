@@ -18,8 +18,10 @@
 	4) Procurar no google o Repositório que tenha a função e serviço do NWDAF
 	4.1. site:github.com Nnwdaf_AnalyticsInfo.yaml
 	. Depois de clicar em RAW, copiar tudo.
+
 	
-	<img src="https://user-images.githubusercontent.com/29335033/146395128-dca01f3b-e59f-4219-96cc-00b118ada528.png" width="15%"/>
+	
+  <img src="https://user-images.githubusercontent.com/29335033/146395128-dca01f3b-e59f-4219-96cc-00b118ada528.png"/>
 	
 	
 	--> Tem que ter permissão de leitura e escrita neste diretório (openapi_teste)
