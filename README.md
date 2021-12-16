@@ -144,12 +144,11 @@ Não esqueça de acessar o diretório do serviço, conforme mostra imagem abaixo
   <img src="https://user-images.githubusercontent.com/29335033/146405306-7883decf-4772-4905-b25e-6939de629f7c.png"/> 		
 	
 	8. UPF   
-	É uma função de rede que trata de dados do usuário (plano de dados do usuário). Para subir este serviço tem que acessar via terminal no diretorio do UPF, pois foi gerado em c e necessita instalar as bibliotecas para que possa ser compilada. O requisito mínimo é a versão do kernel acima de 5.04 e para verificar no Linux utilize o comando no terminal "uname -r". Caso esteja abaixo desta versão deve ser feito uma atualização do kernel.
-	
-	
+	É uma função de rede que trata de dados do usuário (plano de dados do usuário). Para subir este serviço tem que acessar via terminal no diretorio do UPF, pois foi gerado em c e necessita instalar as bibliotecas para que possa ser compilada. O requisito mínimo é a versão do kernel acima de 5.04 e para verificar no Linux utilize o comando no terminal <b>"uname -r"</b>. Caso esteja abaixo desta versão deve ser feito uma atualização do kernel.
+  <img src="https://user-images.githubusercontent.com/29335033/146405446-7d893759-8c34-4b5f-a53e-ab410bba3ec0.png"/> 		
 	
 	. Para verificar os requisitos e como instalar o serviço UPF acessar o github do free5gc - free5gc/upf at b68893439706676c4372d848981fcdbe0c69a41d (github.com)
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146405994-d7fc63d2-851c-47e0-9807-c91495ac3ecd.png"/> 		
 	
 	. Caso necessite atualizar o Kernel favor executar o comando abaixo:
 		 - sudo apt-get install -y linux-image-5.0.0-23-generic
@@ -167,7 +166,7 @@ sudo apt-get -y install git gcc g++ cmake go libmnl-dev autoconf libtool libyaml
 		go get github.com/sirupsen/logrus
 		
 	. Caso a linha de comando "sudo apt-get -y install git gcc g++ cmake go libmnl-dev autoconf libtool libyaml-dev" dê erro, como mostra na imagem abaixo, deve-se instalar o pacote go:
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146405306-7883decf-4772-4905-b25e-6939de629f7c.png"/> 		
 	
 	
 	. Instalar o pacote go, utilize a linha de comando:
