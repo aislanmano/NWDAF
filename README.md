@@ -1,15 +1,87 @@
-	1) Antes Instalar as ferramentas: Visual Code, NodeJS, GoLand, Net-tools, OpenSSH, MongoDB executar um "sudo apt-get update" para atualização de pacotes
-	. Para verificar a versão de instalação do Visual Code, digitar: code --version
+	1) Antes Instalar as ferramentas: Visual Studio Code, NodeJS, GoLand, Net-tools, MongoDB, OpenSSH executar um "sudo apt-get update" para atualização de pacotes
 	. Para verificar a versão de instalação do Nodejs, digitar: nodejs --version
+	. Para verificar a versão de instalação do Visual Studio Code, digitar: code --version
+
+	. Visual Studio COde: 
+	 sudo snap install code --classic
+	  
+	. Nodejs: 
+	 sudo snap install nodejs
+	
+	  - As vezes é necessário instala o npm, que é o pacote gerenciador do Nodejs
+	   sudo apt install npm
 	
 	. Goland: 
-	  1. sudo apt-get install snapd
-	  2. sudo snap install goland --classic
-	. NetTools: sudo apt-get install net-tools
-	. MongoDB: para verificar o MongoDB inicializar com o comando "Mongo" e para ver os databases instalado, executar o comando: "show databases"
+	  sudo apt-get install snapd
+	  sudo snap install goland --classic
+	
+	. Go:
+	  sudo snap install go --classic
+	
+	. NetTools:
+	  sudo apt-get install net-tools
+	
+	. MongoDB: 
+	  1. curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+	
+	  2.  O comando abaixo irá retornar a chave do MongoDB em algum lugar na saída:
+	  apt-key list
+  <img src="https://user-images.githubusercontent.com/29335033/146449358-b5e3e7bc-9cb6-4160-8549-6dd6acad30b3.png"/>
+  
+	  3. Executar o comando abaixo:
+	  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+	
+	  4. Atualizar o índice de pacote do servidor para que o APTR encontre o pacote "mongodb-org"
+	  sudo apt-get update
+	
+	  5. Instalar o MongoDB:
+	  sudo apt install mongodb-org
+	
+	  6. Execute o comando systemctl a seguir para iniciar o serviço MongoDB:
+	  sudo systemctl start mongod.service
+	 
+	  7. Verificar o status do serviço:
+	  sudo systemctl status mongod
+	 
+	  8. Depois de confirmar que ele está funcionando como esperado, habilite o serviço MongoDB para iniciar durante a inicialização:
+	  sudo systemctl enable mongod
+	
+	  9. Para verificar o MongoDB inicializar com o comando "Mongo" e para ver os databases instalado, executar as linhas de comando em sequencia: 
+	  mongodb
+          show databases
+	
+	. OpenSSH: 
+	  1. Instalando o openssh:
+	   sudo apt-get install openssh-server
+	
+	  2. Ativando o serviço
+	   sudo service ssh status
+	
+	  3. Verificando se o serviço está ativo e funcionando
+	   sudo systemctl status sshd
+	
+	  4. Habilitando conexões SSH em seu host:
+	   sudo ufw allow ssh
+	
+	   - Se não tiver certeza se está usando ativamente o firewall UFW, execute o comando
+	     sudo ufw status
+	
+	  5. Verificando se o serviço está habilitado ou não:
+	   sudo systemctl list-unit-files | grep enabled | grep ssh
+	
+	     - Se não houver resultados em seu terminal, você deve “habilitar” o serviço para que seja iniciado no momento da inicialização
+	       sudo systemctl enable ssh
+	
+	  6. Reiniciando seu servidor SSH para aplicar as alterações:
+	   sudo systemctl restart sshd
+	
+	  7. Verificar se o serviço foi reiniciado:
+	   sudo systemctl status sshd
+
 	
 	2) Criar um diretório
-	. Exemplo: openapi_teste
+	. mkdir openapi_teste
+
 	
 	3) Instalar o Editor Texto
   Editores de linha de comando (CLI)
