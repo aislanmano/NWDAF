@@ -188,7 +188,5 @@ sudo apt-get -y install git gcc g++ cmake go libmnl-dev autoconf libtool libyaml
 	
 	11. SERVER-FRONT-END 
 	
-	
-	
-![image](https://user-images.githubusercontent.com/29335033/146402971-ec1fc53c-7064-4153-b41c-c591af678934.png)
+
 
