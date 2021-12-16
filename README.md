@@ -76,6 +76,7 @@
   
 	
 	17) Inicializar o free5gc
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146401779-ffd9a368-3b15-4155-98d2-63d7b5750ffc.png"/>
+  
 	18) Configurando o goland com freegc para fazer o Debug
 	https://www.free5gc.org/installations/stage-3-free5gc-install/
