@@ -98,62 +98,50 @@ Não esqueça de acessar o diretório do serviço, conforme mostra imagem abaixo
 	1. NRF   2. UDR   3. UDM   4. AUSF   5. NSSF   6. AMF   7. PCF   8. UPF (sudo -E ./bin/free5gc-upfd)     9. SMF   10. SERVER-WEB     11. SERVER-FRONT-END ( REACT_APP_HTTP_API_URL=http://core_ip_address:5000/api PORT=3000 yarn start )
 	
 	20) Deve-ser fazer o debug do serviço NRF, executando o Debug clicando com o botão direito do mouse no arquivo "nrf.go". O serviço NRF é responsável para registrar os demais microserviços, no contexto 5G.
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146403520-f761e320-9e50-43b4-afd3-b317e8125428.png"/> 	
 	
 	21) Se observamos a imagem abaixo, agora temos o microserviço da NRF respondendo no endereço [127.0.0.10:8000]. Este micro serviço é de rede
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146403908-ac3c2f8a-cd91-4574-8a60-2aefca8c94f4.png"/> 	
 	
 	Indo ao Terminal, verifica-se que o serviço NRF já criou a estrutura de dados do free5gc, veja imagem abaixo:
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146404135-3ee14295-9926-4316-b355-d3802eeb7e39.png"/> 	
 	
 	. Comandos no MongoDB para verificar banco de dados e coleções e dados dos micros serviços já coletados:
 	  - show databases
 	  - show colletctions
 	  - db.<nome_da_collection>.find().pretty()    - Exemplo:  db.NfProfile.find().pretty()
-	
-	
+		
 	
 	22) Na pasta "config" dentro do Projeto free5gc possui um arquivo de configuração para cada função/serviço de Rede. Observa-se na imagem abaixo que no arquivo nrfcfg.yaml, o MongoDB já esta configurado com o IP e porta:
+  <img src="https://user-images.githubusercontent.com/29335033/146402755-9e318c57-616a-4947-a174-7a12603d7a6b.png"/> 	
 	
 	
 	23) Agora deve-se levantar os demais serviços: 2. UDR   3. UDM   4. AUSF   5. NSSF   6. AMF   7. PCF   8. UPF   9. SMF   10. SERVER-WEB    11. SERVER-FRONT-END 
 	. O serviço de UDR faz a interface com o usuário
 	
 	2. UDR
-	
-	
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146404238-6e66e064-33e5-4722-9ed3-34e4c0afa509.png"/> 		
+  <img src="https://user-images.githubusercontent.com/29335033/146404338-ebb726e5-d5da-4245-868d-02e2d44639a3.png"/> 		
 	
 	3. UDM
-	
-	
-	
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146404512-76cb73a7-4e54-499b-b7a6-9741a3ea9d85.png"/> 	
+  <img src="https://user-images.githubusercontent.com/29335033/146404583-c787acf7-0126-4a02-a07b-96bffef57c13.png"/> 		
 	
 	4. AUSF   
-	
-	
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146404666-8d9d4609-698a-4c21-a047-a700e7a71252.png"/> 	
+  <img src="https://user-images.githubusercontent.com/29335033/146404758-c068c4dc-d29f-4f51-906e-36bf6d3a323a.png"/> 		
 	
 	5. NSSF   
-	
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146404815-7e3ccfed-6997-467e-bb62-576af50a5f33.png"/> 	
+  <img src="https://user-images.githubusercontent.com/29335033/146404922-01514953-0a39-4ded-94b6-86263a036bdd.png"/> 		
 	
 	6. AMF   
-	
-	
-	
-	
-	7. PCF   
-	
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146405027-475a8c8e-6ccf-4117-923a-e8c9d50c18ac.png"/> 	
+  <img src="https://user-images.githubusercontent.com/29335033/146405137-bc95731b-0c21-4dd9-a944-6336e422d7d1.png"/> 		
 
+	7. PCF   
+  <img src="https://user-images.githubusercontent.com/29335033/146405217-ec205605-6ede-47ce-b4f0-d86098bc46e7.png"/> 	
+  <img src="https://user-images.githubusercontent.com/29335033/146405306-7883decf-4772-4905-b25e-6939de629f7c.png"/> 		
 	
 	8. UPF   
 	É uma função de rede que trata de dados do usuário (plano de dados do usuário). Para subir este serviço tem que acessar via terminal no diretorio do UPF, pois foi gerado em c e necessita instalar as bibliotecas para que possa ser compilada. O requisito mínimo é a versão do kernel acima de 5.04 e para verificar no Linux utilize o comando no terminal "uname -r". Caso esteja abaixo desta versão deve ser feito uma atualização do kernel.
