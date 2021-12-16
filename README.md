@@ -73,10 +73,135 @@
 
 	16) Em seguida abri o GoLand e apontar para a pasta do projeto "free5gc"
   <img src="https://user-images.githubusercontent.com/29335033/146401569-64a132c5-ade9-4c99-8337-a0ea375e0226.png"/>
-  
-	
-	17) Inicializar o free5gc
+  	
+	17) Deve instalar o SDK no Go Land
   <img src="https://user-images.githubusercontent.com/29335033/146401779-ffd9a368-3b15-4155-98d2-63d7b5750ffc.png"/>
   
-	18) Configurando o goland com freegc para fazer o Debug
-	https://www.free5gc.org/installations/stage-3-free5gc-install/
+	. Aguardar fazer o download e depoi clicar no botão OK, onde deve iniciar a instalação e configuração:
+  <img src="https://user-images.githubusercontent.com/29335033/146402093-ee2f0f24-21e0-4cdf-bbb4-c3d7ac881bec.png"/>
+  
+	. Veja na imagem abaixo que foi instalado o SDK na ferramenta Go Land, e aguardar que seja finalizado a parte de configuração e indexação:
+  <img src="https://user-images.githubusercontent.com/29335033/146402579-bcd1f476-cf1a-4b97-9faf-36ad9aa089ab.png"/>
+  	  
+	. A indexação foi finalizada com sucesso conforme mostra imagem abaixo e deva reiniciar a aplicação Go Land:
+  <img src="https://user-images.githubusercontent.com/29335033/146402662-dc27ddd4-5067-46ef-b607-d5cd1572eabc.png"/>
+  
+	18) Para verificar a origem do repositório de cada micro serviço deve ser digitado o comando abaixo no Terminal do próprio Go Land. 
+Não esqueça de acessar o diretório do serviço, conforme mostra imagem abaixo:
+	
+##	Git remote get-url origin
+  <img src="https://user-images.githubusercontent.com/29335033/146402755-9e318c57-616a-4947-a174-7a12603d7a6b.png"/>
+  	
+	
+	19) Após a configuração do Go Land com free5gc para fazer o Debug dos serviços, deve-se levantar os seguintes serviços :
+	
+	1. NRF   2. UDR   3. UDM   4. AUSF   5. NSSF   6. AMF   7. PCF   8. UPF (sudo -E ./bin/free5gc-upfd)     9. SMF   10. SERVER-WEB     11. SERVER-FRONT-END ( REACT_APP_HTTP_API_URL=http://core_ip_address:5000/api PORT=3000 yarn start )
+	
+	20) Deve-ser fazer o debug do serviço NRF, executando o Debug clicando com o botão direito do mouse no arquivo "nrf.go". O serviço NRF é responsável para registrar os demais microserviços, no contexto 5G.
+	
+	
+	
+	21) Se observamos a imagem abaixo, agora temos o microserviço da NRF respondendo no endereço [127.0.0.10:8000]. Este micro serviço é de rede
+	
+	
+	Indo ao Terminal, verifica-se que o serviço NRF já criou a estrutura de dados do free5gc, veja imagem abaixo:
+	
+	
+	. Comandos no MongoDB para verificar banco de dados e coleções e dados dos micros serviços já coletados:
+	  - show databases
+	  - show colletctions
+	  - db.<nome_da_collection>.find().pretty()    - Exemplo:  db.NfProfile.find().pretty()
+	
+	
+	
+	22) Na pasta "config" dentro do Projeto free5gc possui um arquivo de configuração para cada função/serviço de Rede. Observa-se na imagem abaixo que no arquivo nrfcfg.yaml, o MongoDB já esta configurado com o IP e porta:
+	
+	
+	23) Agora deve-se levantar os demais serviços: 2. UDR   3. UDM   4. AUSF   5. NSSF   6. AMF   7. PCF   8. UPF   9. SMF   10. SERVER-WEB    11. SERVER-FRONT-END 
+	. O serviço de UDR faz a interface com o usuário
+	
+	2. UDR
+	
+	
+	
+	
+	
+	3. UDM
+	
+	
+	
+	
+	
+	
+	4. AUSF   
+	
+	
+	
+	
+	
+	5. NSSF   
+	
+	
+	
+	
+	6. AMF   
+	
+	
+	
+	
+	7. PCF   
+	
+	
+	
+
+	
+	8. UPF   
+	É uma função de rede que trata de dados do usuário (plano de dados do usuário). Para subir este serviço tem que acessar via terminal no diretorio do UPF, pois foi gerado em c e necessita instalar as bibliotecas para que possa ser compilada. O requisito mínimo é a versão do kernel acima de 5.04 e para verificar no Linux utilize o comando no terminal "uname -r". Caso esteja abaixo desta versão deve ser feito uma atualização do kernel.
+	
+	
+	
+	. Para verificar os requisitos e como instalar o serviço UPF acessar o github do free5gc - free5gc/upf at b68893439706676c4372d848981fcdbe0c69a41d (github.com)
+	
+	
+	. Caso necessite atualizar o Kernel favor executar o comando abaixo:
+		 - sudo apt-get install -y linux-image-5.0.0-23-generic
+	
+	. Instalar bibliotecas em C para que possa ser compilado o serviço de UPF:
+		sudo apt-get -y install cmake
+		sudo apt-get -y install libmnl-dev
+		sudo apt-get -y install autoconf
+		sudo apt-get -y install libtool
+		sudo apt-get -y install libyaml-dev
+		
+		
+		sudo apt-get -y update
+sudo apt-get -y install git gcc g++ cmake go libmnl-dev autoconf libtool libyaml-dev
+		go get github.com/sirupsen/logrus
+		
+	. Caso a linha de comando "sudo apt-get -y install git gcc g++ cmake go libmnl-dev autoconf libtool libyaml-dev" dê erro, como mostra na imagem abaixo, deve-se instalar o pacote go:
+	
+	
+	
+	. Instalar o pacote go, utilize a linha de comando:
+	 sudo snap install go --classic
+	
+	. Para instalar seguir os passos abaixo:
+	
+	
+	
+	
+	
+	
+	
+	9. SMF   
+	
+	
+	10. SERVER-WEB    
+	
+	
+	11. SERVER-FRONT-END 
+	
+	
+	
+![image](https://user-images.githubusercontent.com/29335033/146402971-ec1fc53c-7064-4153-b41c-c591af678934.png)
+
