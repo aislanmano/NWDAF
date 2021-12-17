@@ -8,7 +8,7 @@
 	. Para verificar a versão de instalação do Nodejs, digitar: nodejs --version
 	. Para verificar a versão de instalação do Visual Studio Code, digitar: code --version
 
-	. Visual Studio COde: 
+	. Visual Studio Code: 
 	 sudo snap install code --classic
 	  
 	. Nodejs: 
