@@ -1,3 +1,9 @@
+## Apresentação
+
+	. Este trabalho contém o script sobre como criar uma rede free5gc subindo o serviço de NWDAF para que posso coletar dados de dispositivos móveis e gerar insights através de dashboards para análise de anomalias de comportamento do dispositivo.
+	. A NWDAF foi definido no 3GPP TS 29.520 que incorpora interfaces padrão da arquitetura baseada em serviço para coletar dados por assinatura ou modelo de solicitação de outras funções de rede e procedimentos semelhantes. O objetivo é fornecer funções analíticas na rede para automação ou geração de relatórios, resolvendo os principais desafios de interface ou formato personalizado.
+	. Num ambiente onde está se “ouvindo” uma rede 5G (Free5GC) coletando dados para serem imputados e gerados insights por meios de dashboards para que possam analisados e orientem na solução de possíveis anomalias geradas e identificadas em eventos de sinalização e comportamento de dispositivos. Assim, coletando diferente tipos de dados será possível ver a causa da anomalia e obtendo uma assertividade significativa na solução do problema.
+
 	1) Antes Instalar as ferramentas: Visual Studio Code, NodeJS, GoLand, Net-tools, MongoDB, OpenSSH executar um "sudo apt-get update" para atualização de pacotes
 	. Para verificar a versão de instalação do Nodejs, digitar: nodejs --version
 	. Para verificar a versão de instalação do Visual Studio Code, digitar: code --version
