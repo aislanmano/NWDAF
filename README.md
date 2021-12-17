@@ -335,12 +335,27 @@ sudo apt-get -y install git gcc g++ cmake go libmnl-dev autoconf libtool libyaml
 	   sudo -E ./bin/free5gc-upfd
 		
 	9. SMF   
-	
-	
+  <img src="https://user-images.githubusercontent.com/29335033/146615751-542dcc63-1ed4-4a01-b3cc-686ad7e152f4.png"/> 			
+  <img src="https://user-images.githubusercontent.com/29335033/146615824-387a0437-44ed-44fa-8796-d9608c609790.png"/> 
+  
 	10. SERVER-WEB    
+	. Acessar o diretório "free5gc"   
+	cd webconsole
+	cd frontend
+	yarn install
+	yarn build
+	rm -rf ../public
+	cp -R build ../public
+	cd..
+	go build -o bin/webconsole server.go
 	
+	. Será criado uma interface gráfica para fazer a gestão dos dispositivos.
 	
-	11. SERVER-FRONT-END 
+  <img src="https://user-images.githubusercontent.com/29335033/146615919-a428cd73-5283-40c9-99a9-94ef2598e508.png"/> 				
+	. Agora deve iniciar o serviço:
+	REACT_APP_HTTP_API_URL=htpp://127.0.0.1:5000/api PORT=3000 yarn start
+
 	
+	11. SERVER-FRONT-END 		
 
 
