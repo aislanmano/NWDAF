@@ -9,10 +9,10 @@
 	. Para verificar a versão de instalação do Visual Studio Code, digitar: code --version
 
 	. Visual Studio Code: 
-	 sudo snap install code --classic
+	 sudo apt install code --classic
 	  
 	. Nodejs: 
-	 sudo snap install nodejs
+	 sudo apt install nodejs
 	
 	  - As vezes é necessário instala o npm, que é o pacote gerenciador do Nodejs
 	   sudo apt install npm
